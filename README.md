@@ -6,8 +6,8 @@
 - @PatchMapping("/{userId}"): cập nhật một phần
 - //
 - @PathVariable: lấy dữ liệu từ URL
-- @RequestBody: lấy dữ liệu từ body của request, chuyển từ json thành java
-- @RequestParam: lấy dữ liệu từ query string
+- @RequestBody: lấy dữ liệu từ body của request, chuyển từ json thành java POST, PUT (vì cần truyền dữ liệu trong body).
+- @RequestParam: lấy dữ liệu từ qua URL thay vì body POST, PUT, DELETE
 - @Component: class không phải Service, Repository hay Controller.
 - @Autowired: tự động inject 1 bean mà không cần từ khóa new
 - @Primary: đánh dấu bean ưu tiên
@@ -22,8 +22,15 @@
 - @NotEmpty: collection không được để trống
 - @Pattern: regex validate
 - @valid: xác thực, @Valid @RequestBody
+
+- @Operation(...): thuộc Swagger giúp mô tả API
 2. Lý thuyết
 - enum là 1 kiểu dữ liệu chứa các giá trị cố định
 - lombok: giảm bớt mã lặp lại bằng cách cung cấp anotation tự động tạo getter, setter
 - JPA là 1 interface
-   
+- 
+- Post: có request body, không @PathVariable
+- GET: không request body, có thể có @PathVariable
+- PUT: có cả 2
+- Delete: có  @PathVariable
+- Serializable : class có thể chuyển đổi thành chuỗi byte, thường dùng cho DTO
