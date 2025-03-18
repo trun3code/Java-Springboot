@@ -27,10 +27,16 @@
 2. Lý thuyết
 - enum là 1 kiểu dữ liệu chứa các giá trị cố định
 - lombok: giảm bớt mã lặp lại bằng cách cung cấp anotation tự động tạo getter, setter
-- JPA là 1 interface
-- 
+
+- ORM: cách tiếp cận ánh xạ từ bảng đến class không cần resultSet của JDBC
+- JPA là 1 interface đặc tả của ORM.
+- Hibernate là triển khai của JPA, ORM, hiệu suất cao
+- so sách hibernate với JDBC
+
+
 - Post: có request body, không @PathVariable
 - GET: không request body, có thể có @PathVariable
 - PUT: có cả 2
 - Delete: có  @PathVariable
 - Serializable : class có thể chuyển đổi thành chuỗi byte, thường dùng cho DTO
+- có 2 cách kết nối DB: JDBC hoặc framework
