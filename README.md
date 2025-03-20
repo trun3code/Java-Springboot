@@ -32,7 +32,7 @@
 - JPA là 1 interface đặc tả của ORM.
 - Hibernate là triển khai của JPA, ORM, hiệu suất cao
 - so sách hibernate với JDBC
-
+t
 
 - Post: có request body, không @PathVariable
 - GET: không request body, có thể có @PathVariable
@@ -40,3 +40,16 @@
 - Delete: có  @PathVariable
 - Serializable : class có thể chuyển đổi thành chuỗi byte, thường dùng cho DTO
 - có 2 cách kết nối DB: JDBC hoặc framework
+
+- Tight-coupling: liên kết chặt, khi 2 class liên kết chặt với nhau thì sửa class A cũng phải sửa cả class B nữa
+- Loose-coupling: ngược lại dùng DI
+- DI là 1 phương pháp lập trình giúp giảm sự phụ thuộc giữa các lớp trong java( constructor, setter, interface)
+  - VD: tiêm service vào class client bằng constructor injection
+  - public Clinent(MessageService messageserviceParam){ this.messageService =messageserviceParam}
+  - tiêm sự phụ thuộc vào constructor
+
+- Anotation: chú thích, bổ sung thông tin cho mã nguồn
+- @Component: đánh dấu là cần được quản lí bởi spring container, không cần khởi tạo vẫn có thể dùng
+- @Autowired: tiêm đối tượng ở bên dưới vào cho class
+- Bean: Object được quản lí bởi IOC được gọi là bean
+    
